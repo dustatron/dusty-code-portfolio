@@ -3,12 +3,29 @@
   <head>
     <title>DustyP</title>
     <%= csrf_meta_tags %>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
+    
+    <ul class="nav justify-content-center bg-dark navbar-dark">
+      <li class="nav-item">
+        <a class="nav-link active" href="<%= static_pages_home_path%>">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="<%= static_pages_contact_path %>">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="<%= static_pages_about_path %>">About</a>
+      </li>
+
+    </ul>
+    <p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
